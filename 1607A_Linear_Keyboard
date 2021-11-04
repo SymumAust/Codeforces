@@ -1,0 +1,38 @@
+/* Md. Symum Hossain 
+     AUST, CSE
+     symumhossainaust@gmail.com
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0; i<t; i++)
+    {
+        string f;
+        cin>>f;
+        string c;
+        cin>>c;
+        int j=0,k=0;
+        int len = c.length();
+        int index =0;
+        int coun1=0;
+        while(c[j]!=c[len])
+        {
+            coun1=k+1;
+            k=0;
+            while(c[j]!=f[k])
+            {
+                k++;
+            }
+            if(j>=1)
+            {
+                index = index+abs(coun1-(k+1));
+            }
+            j++;
+        }
+        cout<<index<<endl;
+    }
+}
